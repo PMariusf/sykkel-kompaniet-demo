@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Sykkel Kompaniet – demo av nettbutikk for sykkeldeler." />
+  <title>Sykkel Kompaniet – Demo</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Sykkel Kompaniet">
+      <div class="brand-mark">SK</div>
+      <div class="brand-copy"><strong>SYKKEL</strong><span>KOMPANIET</span></div>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Hovedmeny">
+      <a class="active" href="#top">Hjem</a>
+      <a href="#kategorier">Sykkeldeler</a>
+      <a href="#merker">Merker</a>
+      <a href="#produkter">Tilbud</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <div class="header-actions">
+      <label class="search">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" placeholder="Søk etter produkter..." />
+      </label>
+      <button class="icon-btn" aria-label="Konto">◯</button>
+      <button class="icon-btn cart-btn" aria-label="Handlekurv">🛒<b id="cartCount">0</b></button>
+    </div>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Åpne meny">☰</button>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#top">Hjem</a><a href="#kategorier">Sykkeldeler</a><a href="#merker">Merker</a>
+    <a href="#produkter">Tilbud</a><a href="#kontakt">Kontakt</a>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">KVALITET GIR BEDRE TURER</p>
+        <h1>Deler til<br><span>sykkelen din</span></h1>
+        <p class="lead">Kvalitetsdeler for vei, terreng og hverdagssykling. Et ryddig sted å finne riktig del – uten unødvendig styr.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#kategorier">Se sykkeldeler →</a>
+          <a class="btn secondary" href="#produkter">Finn riktig del</a>
+        </div>
+
+        <div class="trust-row">
+          <div><span>🚚</span><b>Rask levering</b><small>1–3 virkedager</small></div>
+          <div><span>🛡</span><b>Trygg handel</b><small>Sikre betalingsløsninger</small></div>
+          <div><span>▣</span><b>Stort utvalg</b><small>Deler fra kjente merker</small></div>
+          <div><span>★</span><b>Eksperthjelp</b><small>Vi hjelper deg å velge</small></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-card">
+          <span class="hero-badge">DEMO</span>
+          <div class="gear large"></div>
+          <div class="rotor"></div>
+          <div class="chain"></div>
+          <div class="crank">XT</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="kategorier">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">KATEGORIER</p>
+          <h2>Finn deler etter kategori</h2>
+        </div>
+        <a href="#produkter">Se alle kategorier →</a>
+      </div>
+
+      <div class="category-grid">
+        <a class="category-card" href="#produkter"><div class="shape rotor-mini"></div><span>Bremser</span><b>→</b></a>
+        <a class="category-card" href="#produkter"><div class="shape cassette-mini"></div><span>Drivverk</span><b>→</b></a>
+        <a class="category-card" href="#produkter"><div class="shape tire-mini"></div><span>Dekk & slanger</span><b>→</b></a>
+        <a class="category-card" href="#produkter"><div class="shape wheel-mini"></div><span>Hjul</span><b>→</b></a>
+        <a class="category-card" href="#produkter"><div class="shape pedal-mini"></div><span>Pedaler</span><b>→</b></a>
+        <a class="category-card" href="#produkter"><div class="shape cockpit-mini"></div><span>Styre & cockpit</span><b>→</b></a>
+      </div>
+    </section>
+
+    <section class="utility-strip">
+      <div>⌕ <span><b>Søk etter merke</b><small>Finn favorittmerkene dine</small></span></div>
+      <div>▣ <span><b>På lager</b><small>Klart til sending</small></span></div>
+      <div>🔥 <span><b>Populære deler</b><small>Det kundene ser på nå</small></span></div>
+      <div>🚚 <span><b>Rask levering</b><small>Over hele Norge</small></span></div>
+    </section>
+
+    <section class="section" id="produkter">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">UTVALGTE PRODUKTER</p>
+          <h2>Populære sykkeldeler</h2>
+        </div>
+        <span class="muted">Demo-produkter</span>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="brands" id="merker">
+      <div>
+        <p class="eyebrow">POPULÆRE MERKER</p>
+        <h3>Kvalitetsdeler fra ledende produsenter</h3>
+      </div>
+      <div class="brand-list">
+        <span>SHIMANO</span><span>SRAM</span><span>CONTINENTAL</span><span>MAXXIS</span><span>SCHWALBE</span>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div>
+        <h2>Få de beste tilbudene først</h2>
+        <p>Meld deg på nyhetsbrev for tilbud, nyheter og nye varer.</p>
+      </div>
+      <form id="newsletterForm">
+        <input type="email" placeholder="Din e-postadresse" required />
+        <button class="btn primary" type="submit">Meld meg på</button>
+      </form>
+    </section>
+  </main>
+
+  <footer id="kontakt">
+    <div class="footer-brand">
+      <div class="brand footer-logo">
+        <div class="brand-mark">SK</div>
+        <div class="brand-copy"><strong>SYKKEL</strong><span>KOMPANIET</span></div>
+      </div>
+      <p>Demo av nettbutikk for sykkeldeler. Innhold, priser og kontaktinformasjon er foreløpig eksempeldata.</p>
+    </div>
+    <div><h4>Kundeservice</h4><a href="#">Frakt og levering</a><a href="#">Retur og reklamasjon</a><a href="#">Kontakt oss</a></div>
+    <div><h4>Informasjon</h4><a href="#">Om oss</a><a href="#">Vilkår</a><a href="#">Personvern</a></div>
+    <div><h4>Kontakt</h4><p>Sykkel Kompaniet</p><p>Telefon: kommer</p><p>E-post: kommer</p></div>
+  </footer>
+
+  <div class="toast" id="toast">Lagt i handlekurven</div>
+  <script src="script.js"></script>
+</body>
+</html>
